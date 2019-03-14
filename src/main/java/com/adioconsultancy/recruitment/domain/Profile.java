@@ -48,7 +48,7 @@ public class Profile implements Serializable {
     @Column(unique = true)
     private String photofilename;
 
-    @OneToOne(mappedBy="profile", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @OneToOne(mappedBy = "profile", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
 

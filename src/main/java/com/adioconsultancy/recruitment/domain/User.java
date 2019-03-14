@@ -32,7 +32,7 @@ public class User  implements Serializable {
     @Column(unique = true)
     private String password;
 
-    @OneToOne(mappedBy="user", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Profile profile;
 
     public User()
